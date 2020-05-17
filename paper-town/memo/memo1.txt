@@ -1,4 +1,3 @@
-
 FileType=OuDia.1.02
 Rosen.
 Rosenmei=松島電気鉄道松境本線

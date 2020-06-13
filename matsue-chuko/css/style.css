@@ -5,6 +5,9 @@ html {
   font-family: "Inter", "Noto Sans JP", sans-serif;
   text-align: center;
   width: 100%;
+}
+body {
+  width: 100%;
   top: 0;
   bottom: 0;
 }

@@ -27,6 +27,9 @@ header a:visited {
   color: #fafafa;
   text-decoration: none;
 }
+content {
+  top: 0;
+}
 footer {
   background-color: #212121;
   color: #fafafa;

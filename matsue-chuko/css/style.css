@@ -4,10 +4,15 @@
 html {
   font-family: "Inter", "Noto Sans JP", sans-serif;
   text-align: center;
+  width: 100%;
+  top: 0;
+  bottom: 0;
 }
 header {
   background-color: #212121;
   color: #fafafa;
+  width: 100%;
+  top: 0;
 }
 header a:link {
   color: #fafafa;
@@ -18,6 +23,8 @@ header a:visited {
 footer {
   background-color: #212121;
   color: #fafafa;
+  width: 100%;
+  bottom: 0;
 }
 footer a:link {
   color: #fafafa;

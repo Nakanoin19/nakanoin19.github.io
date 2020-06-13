@@ -5,3 +5,14 @@ html {
   font-family: "Inter", "Noto Sans JP", sans-serif;
   text-align: center;
 }
+/* :::::: type1 :::::: */
+.details .type1 {
+	overflow: hidden;
+}
+.details .type1 dl {
+	transition: opacity .6s, transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.details .type1:not(:hover) dl {
+	opacity: 0;
+	transform: translateY(100%);
+}

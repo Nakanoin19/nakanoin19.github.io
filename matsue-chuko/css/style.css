@@ -19,6 +19,7 @@ header {
   width: 110%;
   position: fixed;
   margin: auto;
+  top: 0;
   height: 150px;
 }
 header h1 {

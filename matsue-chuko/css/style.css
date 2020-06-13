@@ -23,7 +23,7 @@ header {
   height: 150px;
 }
 header h1 {
-  margin: auto;
+  margin: auto auto auto auto;
 }
 header a:link {
   color: #fafafa;

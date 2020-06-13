@@ -8,13 +8,12 @@ html {
 }
 body {
   width: 100%;
-  top: 0;
-  bottom: 0;
 }
 header {
   background-color: #212121;
   color: #fafafa;
   width: 100%;
+  position: fixed;
   top: 0;
 }
 header a:link {

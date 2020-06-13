@@ -5,3 +5,23 @@ html {
   font-family: "Inter", "Noto Sans JP", sans-serif;
   text-align: center;
 }
+header {
+  background-color: #212121;
+  color: #fafafa;
+}
+header a:link {
+  color: #fafafa;
+}
+header a:visited {
+  color: #fafafa;
+}
+footer {
+  background-color: #212121;
+  color: #fafafa;
+}
+footer a:link {
+  color: #fafafa;
+}
+footer a:visited {
+  color: #fafafa;
+}

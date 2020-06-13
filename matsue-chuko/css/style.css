@@ -19,7 +19,7 @@ header {
   width: 110%;
   position: fixed;
   margin: auto;
-  height: 50px;
+  height: 150px;
 }
 header h1 {
   margin: auto;
@@ -34,7 +34,7 @@ header a:visited {
 }
 content {
   position:relative;
-  top: 50px;
+  top: 150px;
 }
 footer {
   background-color: #212121;

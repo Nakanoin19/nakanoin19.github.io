@@ -20,7 +20,7 @@ header {
   width: 110%;
   position: -webkit-sticky;
   position: sticky;
-  margin: auto;
+  margin: 0 auto;
   text-align: left;
 }
 header a:link {

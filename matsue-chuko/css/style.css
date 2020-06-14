@@ -30,6 +30,9 @@ header a:visited {
   color: #fafafa;
   text-decoration: none;
 }
+content {
+  overflow: auto;
+}
 footer {
   background-color: #212121;
   color: #fafafa;

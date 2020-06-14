@@ -20,10 +20,7 @@ header {
   position: fixed;
   margin: auto;
   top: 0;
-  height: 150px;
-}
-header h1 {
-  line-height: 150px;
+  text-align: left;
 }
 header a:link {
   color: #fafafa;
@@ -32,10 +29,6 @@ header a:link {
 header a:visited {
   color: #fafafa;
   text-decoration: none;
-}
-content {
-  position:relative;
-  top: 150px;
 }
 footer {
   background-color: #212121;

@@ -62,6 +62,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  font-size: 100%;
   z-index: 9999;/*最前面に*/
   width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
   max-width: 330px;/*最大幅（調整してください）*/

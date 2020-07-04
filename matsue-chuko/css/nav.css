@@ -33,11 +33,11 @@ header {
   cursor: pointer;
 }
 #nav-open span:before {
-  bottom: -8px;
+  bottom: 0px;
 }
 #nav-open span:after {
   display: none;
-  bottom: -16px;
+  bottom: 0px;
 }
 
 /*閉じる用の薄黒カバー*/

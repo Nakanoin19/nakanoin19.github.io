@@ -24,23 +24,13 @@ header {
 
 /*ハンバーガーアイコンをCSSだけで表現*/
 #nav-open span, #nav-open span:before, #nav-open span:after {
-  position: absolute;
-  height: 0px;/*線の太さ*/
-  width: 0px;/*長さ*/
   color:#ffffff;/*色*/
-  border-radius: 0px;
   background: #ffffff;
   display: block;
   font-family: "Material Icons";
   font-size: 180%;
   content: 'menu';
   cursor: pointer;
-}
-#nav-open span:before {
-  bottom: 0px;
-}
-#nav-open span:after {
-  bottom: 0px;
 }
 
 /*閉じる用の薄黒カバー*/

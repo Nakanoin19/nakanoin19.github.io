@@ -34,10 +34,10 @@ header {
   cursor: pointer;
 }
 #nav-open span:before {
+  display: none;
   bottom: 0px;
 }
 #nav-open span:after {
-  display: none;
   bottom: 0px;
 }
 

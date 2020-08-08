@@ -16,7 +16,7 @@ body {
   margin: 0 auto;
 }
 header {
-  background-color: #3F51B5;
+  background-color: #345189;
   color: #fafafa;
   top: 0;
   width: 100%;
@@ -36,7 +36,7 @@ content {
   overflow: auto;
 }
 footer {
-  background-color: #3F51B5;
+  background-color: #345189;
   color: #fafafa;
   width: 100%;
   bottom: 0;

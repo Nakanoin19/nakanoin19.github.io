@@ -25,7 +25,7 @@ header {
 /*ハンバーガーアイコンをCSSだけで表現*/
 #nav-open span, #nav-open span:before, #nav-open span:after {
   color:#ffffff;/*色*/
-  background-color: #3F51B5;
+  background-color: #345189;
   display: block;
   font-family: "Material Icons";
   font-size: 180%;

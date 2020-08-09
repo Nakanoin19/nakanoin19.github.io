@@ -68,3 +68,7 @@ h5 {
 h6 {
   font-size: 100%;
 }
+#member {
+  width: 300px;
+  height: 300px
+}

@@ -22,33 +22,8 @@
 <a href="/matsue-chuko"><object type="image/svg+xml" data="/matsue-chuko/assets/img/svg/Chukoren-Matsue-Logo-Mark-1.0.svg" style="display:inline;vertical-align:middle;" width="40px" height="40px"></object><span  style="display:inline;vertical-align:middle;">松江中高学生聯合会</span></a></h1>
 </header>
 <h2>INFO&nbsp;BOX</h2>
-<h3>Whether(Goo)</h3>
-<script>
-// HTMLドキュメントの解析後に実行
-window.addEventListener('DOMContentLoaded', function() {
-	// XMLHttpRequestのインスタンスを作成
-	var req = new XMLHttpRequest();
- 
-	// 読み込み時の処理を設定
-	req.onreadystatechange = function() {
-		// readyState=4は全てのデータを受信済み、
-		// status=200は正常に処理されたことを意味します
-		if( req.readyState == 4 && req.status == 200 ) {
-			// 結果を代入
-			document.getElementById( "message" ).innerHTML = req.responseText;
-		}
-	}
- 
-	// 接続先のURLやメソッドを設定します
-	req.open( "GET", "output_rss.php" );
- 
-	// リクエストをサーバに送信
-	req.send();
- 
-})
-</script>
- 
-<div id="message"></div>
+<h3>Whether</h3>
+<iframe src="https://weather.goo.ne.jp/weather/division-1/320010/" target="_top" width="75%" height="600px"></iframe>
 <h3>COVID-19</h3>
 <iframe src="https://shimane-covid19.com" target="_top" width="75%" height="600px"></iframe>
 <footer>

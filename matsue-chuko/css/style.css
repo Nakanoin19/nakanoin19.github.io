@@ -80,6 +80,6 @@ section {
 section br {
   line-height: 2;
 }
-iframe {
+iframe .linkwindow {
   border: 2px solid #345189;
 }

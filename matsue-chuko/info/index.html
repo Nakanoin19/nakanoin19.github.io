@@ -23,22 +23,31 @@
 </header>
 <h2>INFO&nbsp;BOX</h2>
 <h3>Time</h3>
-<span id="view_time"></span>
+<span id="viewTime"></span>
 
 <script type="text/javascript">
-document.getElementById("view_time").innerHTML = getNow();
+timer = setInterval('clock()',50); //時刻の更新
+
+function clock() {
+	document.getElementById("viewTime").innerHTML = getNow();
+}
 
 function getNow() {
 	var now = new Date();
 	var year = now.getFullYear();
-	var mon = now.getMonth()+1; //１を足すこと
+	var mon = now.getMonth();
 	var day = now.getDate();
 	var hour = now.getHours();
 	var min = now.getMinutes();
 	var sec = now.getSeconds();
+	var you = now.getDay(); //曜日
 
+	//曜日の配列（日～土）
+	var youbi = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+	//月名の選択肢
+	var month = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
 	//出力用
-	var s = year + "年" + mon + "月" + day + "日" + " " + hour + ":" + min + ":" + sec; 
+	var s = youbi[you] + ", " + day + " " + mon + ", " + year + " " + hour + ":" + min + ":" + sec ;
 	return s;
 }
 </script>

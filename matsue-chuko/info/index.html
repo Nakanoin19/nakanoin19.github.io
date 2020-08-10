@@ -32,15 +32,6 @@ function clock() {
 	document.getElementById("viewTime").innerHTML = getNow();
 }
 
-// 1桁の数字を0埋めで2桁にする
-var toDoubleDigits = function(num) {
-  num += "";
-  if (num.length === 1) {
-    num = "0" + num;
-  }
- return num;     
-};
-
 function getNow() {
 	var now = new Date();
 	var year = now.getFullYear();
@@ -50,6 +41,9 @@ function getNow() {
 	var min = now.getMinutes();
 	var sec = now.getSeconds();
 	var you = now.getDay(); //曜日
+	hour = ("0" + hour).slice(-2);
+	min = ("0" + min).slice(-2);
+	sec = ("0" + sec).slice(-2);
 
 	//曜日の配列（日～土）
 	var youbi = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");

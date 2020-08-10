@@ -32,6 +32,15 @@ function clock() {
 	document.getElementById("viewTime").innerHTML = getNow();
 }
 
+// 1桁の数字を0埋めで2桁にする
+var toDoubleDigits = function(num) {
+  num += "";
+  if (num.length === 1) {
+    num = "0" + num;
+  }
+ return num;     
+};
+
 function getNow() {
 	var now = new Date();
 	var year = now.getFullYear();

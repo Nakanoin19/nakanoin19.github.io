@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Info&nbsp;Box-松江中高学生聯合会&nbsp;公式ホームページ</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/matsue-chuko/css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="/matsue-chuko/css/carousel.css">
+        <link rel="stylesheet" href="/matsue-chuko/css/product.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>  
+                <a class="navbar-brand" href="/matsue-chuko"><img src="/matsue-chuko/assets/img/svg/Chukoren-Matsue-Logo-Mark-1.0.svg" height="40px">松江中高学生聯合会</a>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/matsue-chuko">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connect</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                          <a class="dropdown-item" href="/matsue-chuko/joinus">Join</a>
+                          <a class="dropdown-item" href="/matsue-chuko/info">Info&nbsp;Box</a>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </header>
+        
+        <main role="main">
+              <div class="carousel-inner">
+                  <div class="carousel-item active" style="background-image: url(https://pbs.twimg.com/media/Ed0WHL_UMAAXj0D?format=jpg&name=large);">
+                    <div class="container">
+                      <div class="carousel-caption text-left">
+                        <h1>Info&nbsp;Box</h1>
+                        <p>情報BOX(そのまま)</p>
+                        <p><button type="button" class="btn btn-primary btn-lg">草ァwwwwww</button></p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        
+            <!-- Marketing messaging and featurettes
+          ================================================== -->
+            <!-- Wrap the rest of the page in another container to center all the content. -->
+        
+            <div class="container marketing">
+        
+                    <h1 class="text-center">Time</h1>
+                    <p class="text-center"><span id="viewTime"></span></p>
+                    
+                    <script type="text/javascript">
+                    timer = setInterval('clock()',0.01); //時刻の更新
+                    
+                    function clock() {
+                        document.getElementById("viewTime").innerHTML = getNow();
+                    }
+                    
+                    function getNow() {
+                        var now = new Date();
+                        var year = now.getFullYear();
+                        var mon = now.getMonth();
+                        var day = now.getDate();
+                        var hour = now.getHours();
+                        var min = now.getMinutes();
+                        var sec = now.getSeconds();
+                        var you = now.getDay(); //曜日
+                        hour = ("0" + hour).slice(-2);
+                        min = ("0" + min).slice(-2);
+                        sec = ("0" + sec).slice(-2);
+                    
+                        //曜日の配列（日～土）
+                        var youbi = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+                        //月名の選択肢
+                        var month = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+                        //出力用
+                        var s = youbi[you] + ", " + day + " " + month[mon] + ", " + year + " " + hour + ":" + min + ":" + sec ;
+                        return s;
+                    }
+                    </script>
+                    <h1 class="text-center">Whether</h1>
+                    <p class="text-center">Goo天気</p>
+                    <p class="text-center"><iframe style="margin:auto;" class="embed-card embed-webcard" style="display: block; width: 100%; height: 155px; max-width: 500px; margin: 0 auto;" title="東部(松江) - 東部(松江)の天気 - goo天気" src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fweather.goo.ne.jp%2Fweather%2Fdivision-1%2F320010%2F" frameborder="0" scrolling="no"></iframe></p>
+                    <p class="text-center">TwitterでもRSSボット配信してます!!</p>
+                    <h1 class="text-center">COVID-19</h1>
+                    <p style="margin:auto;" width="75%"><iframe style="margin:auto;" src="https://shimane-covid19.com" class="linkwindow" target="_top" width="100%" height="600px" frameborder="0"></iframe></p>
+                    <h1 class="text-center">Twitter</h1>
+                    <p style="margin:auto;" width="75%"><a class="twitter-timeline" data-lang="ja" data-width="100%" data-height="600px" data-dnt="true" data-theme="dark" href="https://twitter.com/Chukoren_Matsue?ref_src=twsrc%5Etfw">Tweets by Chukoren_Matsue</a></p> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    
+            </div><!-- /.container -->
+        
+        
+            <!-- FOOTER -->
+            <footer class="container">
+                <div class="row">
+                    <div class="col-12 col-md">
+                      <img src="/matsue-chuko/assets/img/svg/Chukoren-Matsue-Logo-Mark-1.0.svg" height="40px">
+                    </div>
+                    <div class="col-6 col-md">
+                      <h5>Pages</h5>
+                      <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="/matsue-chuko">Top</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                      <h5>Connect</h5>
+                      <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="/matsue-chuko/joinus">Join</a></li>
+                        <li><a class="text-muted" href="/matsue-chuko/info">Info&nbsp;Box</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                      <h5>なんか</h5>
+                      <ul class="list-unstyled text-small">
+                        <li><a class="text-muted disabled">なんか</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                      <h5>なんか</h5>
+                      <ul class="list-unstyled text-small">
+                        <li><a class="text-muted disabled">なんか</a></li>
+                      </ul>
+                    </div>
+              </div>
+              <p class="float-right"><a href="/matsue-chuko">トップへ戻る</a></p>
+              <p>&copy;&nbsp;2020&nbsp;松江中高学生聯合会理事委員会</p>
+            </footer>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+</html>

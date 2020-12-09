@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>テキストを読むやつ</title>
+</head>
+<body>
+<h1>URL</h1>
+<input type="text" name="url" id="url">
+<input id="Button_Get" type="button" value="Go!" onclick="getData();" />
+<script type="text/javascript">
+    function getData() {
+      //var xmlhttp = createXMLHttpRequest(); //旧バージョンのIEなどに対応する場合
+      var xmlhttp = new XMLHttpRequest();
+      
+      var url = document.getElementById("url").value;
+
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4) {
+          if (xmlhttp.status == 200) { 
+            var elem = document.getElementById("text");
+            elem.innerText = xmlhttp.responseText;
+          } else {
+            alert("status = " + xmlhttp.status);
+          } 
+        }
+      }
+      xmlhttp.open("GET", url);
+      xmlhttp.send();
+    }
+    
+    function createXMLHttpRequest(){
+      if(window.XMLHttpRequest){return new XMLHttpRequest()}
+      if(window.ActiveXObject){
+        try{return new ActiveXObject("Msxml2.XMLHTTP.6.0")}catch(e){}
+        try{return new ActiveXObject("Msxml2.XMLHTTP.3.0")}catch(e){}
+        try{return new ActiveXObject("Microsoft.XMLHTTP")}catch(e){}
+      }
+      return false;
+    }
+</script>
+<textarea id="text" style="width:90%;margin-left:auto;margin-right:auto;" rows="10" readonly></textarea>
+</body>
+</html>

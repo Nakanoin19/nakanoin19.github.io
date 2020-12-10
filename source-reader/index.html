@@ -13,7 +13,7 @@ font: inherit;
 padding: 8px 1px;
 margin-right: 1em;
 }
-button {
+input#Button_Get {
 appearance: none;
 border: 0;
 border-radius: 5px;
@@ -27,7 +27,7 @@ padding: 8px 16px;
 <body>
 <h1>ソースリーダー</h1>
 <input type="text" name="url" id="url">
-<button id="Button_Get" value="Go!" onclick="getData();" />
+<input type="button" id="Button_Get" value="Go!" onclick="getData();" />
 <script type="text/javascript">
     function getData() {
       //var xmlhttp = createXMLHttpRequest(); //旧バージョンのIEなどに対応する場合

@@ -44,6 +44,6 @@ img.ottosei {
 footer.container {
     margin-top: 16px;
 }
-.copyright {
+.copyright::after {
     content:"&copy;2020&nbsp;-&nbsp;2021&nbsp;松江中髙學生聯合会運営委員会";
 }

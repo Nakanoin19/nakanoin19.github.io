@@ -1,23 +1,233 @@
 <!DOCTYPE html>
-<head>
-    <title>ピアノねこのページ</title>
-    <meta http-equiv="content-type" charset="utf-8">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="/css/materialer.css"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="/css/nav.css">
-</head>
-<body>
-    <script type="text/javascript" src="/js/materialer.min.js"></script>
-    <h1>ピアノねこのページへようこそ!!</h1>
-    <h4>Let’s&nbsp;find&nbsp;new&nbsp;"something"!</h4>
-    <p>まだこのページは製作中です。</p>
-    <p>PaperTown公式サイトは<a href="/paper-town">こちら</a>!</p>
-    <p>松江中高學生聯合会公式サイトは<a href="/matsue-chuko">こちら</a>!</p>
-    <p>松江中高学生聯合会「旧」公式サイトは<a href="/matsue-chuko-old">こちら</a>!</p>
-    <p>Matcha&nbsp;Linuxの公式サイトは<a href="/matcha">こちら</a>!</p>
-    <p>ソースリーダーは<a href="/source-reader">こちら</a>!</p>
-    <p>テキストエディタは<a href="/web-editor">こちら</a>!</p>
-    <p>Twitter @nsk_id1010</p>
-</body>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Piano Nekomiya</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="styleseet" href="css/normalize.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <style>
+            * {
+                box-sizing: border-box;
+                user-select: none;
+                z-index: 1;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+            }
+            
+            *::-webkit-scrollbar {
+                display: none;
+            }
+            
+            body {
+                width: 100vw;
+                height: 100vh;
+                text-align: center;
+                vertical-align: middle;
+                background-color: #ffffff;
+                margin: 0px;
+                padding: 0px;
+                font-family: 'Jost', 'Noto Sans JP', sans-serif;
+                line-height: 1.75;
+                outline: none !important;
+                border: none;
+                overflow: hidden;
+                scrollbar-width: 0px;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+            
+            .wrapper {
+                width: 100vw;
+                height: 100vh;
+                object-fit: cover;
+                overflow-y: scroll;
+                backdrop-filter: brightness(0.9);
+            }
+            
+            .itembox {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 8px;
+                transition: all 0.3s;
+            }
+            
+            .item {
+                min-width: calc(50vw - 40px);
+                min-height: calc(50vw - 40px);
+                margin: 16px;
+                border-radius: 5px;
+                backdrop-filter: blur(15px);
+                background: rgba(45, 45, 45, 0.5);
+                transition: all 0.3s;
+            }
+            
+            .item:active {
+                transform: scale(0.9);
+            }
+
+            .item:hover {
+                box-shadow: 0 5px 5px rgb(0 0 0 / 30%);
+            }
+            
+            .image {
+                width: 100%;
+                height: 75%;
+                background-size: cover !important;
+                background-position: center !important;
+                border-radius: 5px 5px 0px 0px;
+                transition: all 0.3s;
+            }
+            
+            .article {
+                height: 20%;
+                line-height: 0px;
+                color: white;
+                font-size: 1.1em;
+                transition: all 0.3s;
+            }
+            
+            @media screen and (min-width: 481px) {
+                .item {
+                    min-width: calc(100vw / 3 - 40px);
+                    min-height: calc(100vw / 3 - 40px);
+                }
+                .article {}
+            }
+            
+            @media screen and (min-width: 960px) {
+                .item {
+                    min-width: calc(25vw - 40px);
+                    min-height: calc(25vw - 40px);
+                }
+                .article {
+                    line-height: 18%;
+                    font-size: 1.7em;
+                }
+            }
+            
+            .plofile {
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                flex-flow: row wrap;
+                box-shadow: 0 3px 3px rgb(0 0 0 / 22%);
+            }
+            
+            .icon {
+                border-radius: 50%;
+                min-width: 140px;
+                min-height: 140px;
+                max-width: 140px;
+                max-height: 140px;
+                margin-left: calc(50vw - 70px);
+                margin-right: calc(50vw - 70px);
+                margin-top: calc(50vh - 140px);
+                margin-bottom: -10vh;
+                transition: all 0.3s ease-in-out;
+            }
+            
+            .icon:active {
+                transform: scale(0.9);
+            }
+            
+            .username {
+                margin-top: 0vh;
+                min-width: 100vw;
+                text-align: center;
+                color: white;
+                font-size: 2em;
+            }
+
+           .more {
+                position: absolute;
+                bottom: 10vh;
+                left: calc(50vw - 2em);
+                cursor: pointer;
+            }
+            
+            .bgimage {
+                background: url('./assets/background-1line-20210326.png');
+                background-size: cover;
+            }
+
+            footer {
+                color: #ffffff;
+                font-size: 1.2em;
+            }
+
+            .white {
+                color: #ffffff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bgimage">
+            <div class="wrapper">
+                <div class="plofile">
+                    <img src="./assets/pineko-20210326.png" alt="icon" class="icon" onclick="document.location.href = 'https://twitter.com/PianoCat1010'">
+                    <p class="username"><span style="border-bottom: 5px solid #ff91b6;">Piano&nbsp;Nekomiya</span></p>
+                    <svg class="more" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" height="4em" viewBox="0 0 24 24" width="4em" onclick="document.querySelector('main').scrollIntoView({behavior: 'smooth',block: 'start'});">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+                    </svg>
+                </div>
+                <main>
+                    <div class="white" style="background-color: rgba(0, 0, 0, 0.5);width: 80vw;margin-top:1em;margin-left: auto;margin-right: auto;padding: 1em;border-radius: 5px;">
+                        <p>島根県立中央病院(出雲市)生まれ、松江市北西部在住</p>
+                        <p>Naiw, Ablazeに所属</p>
+                    </div>
+                    <p class="white" style="font-size: 1.7em;"><span style="border-bottom: 5px solid #ff91b6;">Links</span></p>
+                    <div class="itembox">
+                        <a href="https://pianocat1010.shop" class="item" target="_blank" rel="noopener noreferrer">
+                            <div class="image" style="background: url(./assets/pineko-20210326.png);">
+                            </div>
+                            <p class="article">Home&nbsp;Page</p>
+                        </a>
+                        <a href="https://matsuechuko.shop" class="item" target="_blank" rel="noopener noreferrer">
+                            <div class="image" style="background: url(https://pbs.twimg.com/media/ErRBsSdVgAAfmb6?format=jpg&name=large);">
+                            </div>
+                            <p class="article">Chukoren&nbsp;Matsue</p>
+                        </a>
+                        <a href="/web-editor" class="item" target="_blank" rel="noopener noreferrer">
+                            <div class="image" style="background: url(https://pbs.twimg.com/media/ExZ3qLjVgAIKzoM?format=jpg&name=large);">
+                            </div>
+                            <p class="article">Text&nbsp;Editor</p>
+                        </a>
+                        <a href="/source-reader" class="item" target="_blank" rel="noopener noreferrer">
+                            <div class="image" style="background: url(https://pbs.twimg.com/media/ExZ3qLjVgAIKzoM?format=jpg&name=large);">
+                            </div>
+                            <p class="article">Source&nbsp;Reader</p>
+                        </a>
+                        <a href="https://twitter.com/PianoCat1010" class="item" target="_blank" rel="noopener noreferrer">
+                            <div class="image" style="background: url(https://corriente.top/wp-content/uploads/2015/11/twitter-logo.jpg);">
+                            </div>
+                            <p class="article">Twitter</p>
+                        </a>
+                        <a href="https://0e0.pw/8_Hc" class="item" target="_blank" rel="noopener noreferrer">
+                            <div class="image" style="background: url(https://sekapri.com/wpd/wp-content/uploads/2020/05/amazon.jpg);">
+                            </div>
+                            <p class="article">ほしいもの</p>
+                        </a>
+                        <a href="https://github.com/NSK-1010" class="item" target="_blank" rel="noopener noreferrer">
+                            <div class="image" style="background: url(https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png);">
+                            </div>
+                            <p class="article">GitHub</p>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCScJbEsV4CTYo7llrukgRdQ" class="item" target="_blank" rel="noopener noreferrer">
+                            <div class="image" style="background: url(https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc);">
+                            </div>
+                            <p class="article">YouTube</p>
+                        </a>
+                    </div>
+                </main>
+                <footer>
+                    <p>Piano&nbsp;Nekomiya</p>
+                </footer>
+            </div>
+        </div>
+    </body>
 </html>

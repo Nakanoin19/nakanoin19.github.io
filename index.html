@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reseter.css" />
         <link rel="styleseet" href="css/normalize.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="icon" type="image/png" href="./assets/pineko-20210326.png">
-        <link rel="apple-touch-icon" sizes="1280x1280" href="./assets/pineko.png">
+        <link rel="icon" type="image/png" href="./assets/pineko.png">
+        <link rel="apple-touch-icon" sizes="1023x1023" href="./assets/pineko.png">
         <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
         <style>
             * {
@@ -17,11 +17,11 @@
                 z-index: 1;
                 -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
             }
-            
+
             *::-webkit-scrollbar {
                 display: none;
             }
-            
+
             body {
                 width: 100vw;
                 height: 100vh;
@@ -37,11 +37,11 @@
                 overflow: hidden;
                 scrollbar-width: 0px;
             }
-            
+
             a {
                 text-decoration: none !important;
             }
-            
+
             .wrapper {
                 width: 100vw;
                 height: 100vh;
@@ -49,7 +49,7 @@
                 overflow-y: scroll;
                 backdrop-filter: brightness(0.9);
             }
-            
+
             .itembox {
                 display: flex;
                 flex-wrap: wrap;
@@ -57,7 +57,7 @@
                 padding: 8px;
                 transition: all 0.3s;
             }
-            
+
             .item {
                 min-width: calc(50vw - 40px);
                 min-height: calc(50vw - 40px);
@@ -67,7 +67,7 @@
                 background: rgba(45, 45, 45, 0.5);
                 transition: all 0.3s;
             }
-            
+
             .item:active {
                 transform: scale(0.9);
             }
@@ -75,7 +75,7 @@
             .item:hover {
                 box-shadow: 0 5px 5px rgb(0 0 0 / 30%);
             }
-            
+
             .image {
                 width: 100%;
                 height: 75%;
@@ -84,7 +84,7 @@
                 border-radius: 5px 5px 0px 0px;
                 transition: all 0.3s;
             }
-            
+
             .article {
                 height: 20%;
                 line-height: 0px;
@@ -93,7 +93,7 @@
                 transition: all 0.3s;
                 margin-top: 1em;
             }
-            
+
             @media screen and (min-width: 481px) {
                 .item {
                     min-width: calc(100vw / 3 - 40px);
@@ -101,7 +101,7 @@
                 }
                 .article {}
             }
-            
+
             @media screen and (min-width: 960px) {
                 .item {
                     min-width: calc(25vw - 40px);
@@ -112,7 +112,7 @@
                     font-size: 1.7em;
                 }
             }
-            
+
             .plofile {
                 height: 100vh;
                 width: 100vw;
@@ -120,7 +120,7 @@
                 flex-flow: row wrap;
                 box-shadow: 0 3px 3px rgb(0 0 0 / 22%);
             }
-            
+
             .icon {
                 border-radius: 50%;
                 min-width: 140px;
@@ -133,11 +133,11 @@
                 margin-bottom: -10vh;
                 transition: all 0.3s ease-in-out;
             }
-            
+
             .icon:active {
                 transform: scale(0.9);
             }
-            
+
             .username {
                 margin-top: 0vh;
                 min-width: 100vw;
@@ -151,7 +151,7 @@
                 margin-left: calc(50vw - 2em);
                 cursor: pointer;
             }
-            
+
             .bgimage {
                 background: url('./assets/background-1line-20210326.png');
                 background-size: cover;

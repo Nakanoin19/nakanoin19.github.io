@@ -3,9 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Piano&nbsp;Nekomiya</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="./assets/pineko.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="./assets/pineko.png">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
         <link href="https://nsk-1010.github.io/mdc-web-japanese-font/mdc-web-jp-font.css" rel="stylesheet">
@@ -15,9 +17,13 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/krishdevdb/reseter.css/css/reseter.min.css">
         <link rel="stylesheet" href="./css/normalize.css">
         <style>
+            :root {
+                --mdc-theme-primary: #03a9f4;
+            }
             .grid {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
+                gap: 1em;
             }
             @media screen and (max-width: 720px) {
                 .grid {
@@ -29,9 +35,12 @@
                     grid-template-columns: 1fr;
                 }
             }
+            #itembox .grid {
+                margin-top: 1em;
+            }
         </style>
     </head>
-    <body>
+    <body class="mdc-typography">
         <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
             <div class="mdc-top-app-bar__row">
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
@@ -39,30 +48,77 @@
                 </section>
             </div>
         </header>
-        <main class="mdc-top-app-bar--fixed-adjust" width="90%" style="margin: auto;">
-            <div id="itembox">
+        <main class="mdc-top-app-bar--fixed-adjust" style="width:90%;margin:auto;">
+            <div id="about">
+                <h3 class="mdc-typography--headline3">About</h3>
+                <div class="mdc-card" style="padding:1em;">
+                    <p class="mdc-typography--body1">島根県立中央病院(出雲市)生まれ、松江市北西部在住</p>
+                    <p class="mdc-typography--body1">Naiw, Ablaze, NNN Animeに所属</p>
+                </div>
+            </div>
+            <div id="itembox" style="margin-top:1em;">
                 <h3 class="mdc-typography--headline3">Pages</h3>
                 <div class="grid">
                     <script type="text/javascript">
-                        var json = [
+                        var json = `[
                             {
                                 "title": "Home Page",
                                 "url": "https://pianocat1010.shop",
                                 "image": "./assets/pineko.png"
-                            },{
+                            },
+                            {
                                 "title": "Chukoren Matsue",
                                 "url": "https://matsuechuko.shop",
                                 "image": "https://pbs.twimg.com/media/ErRBsSdVgAAfmb6?format=jpg&name=large"
+                            },
+                            {
+                                "title": "Text Editor",
+                                "url": "/web-editor",
+                                "image": "https://pbs.twimg.com/media/ExZ3qLjVgAIKzoM?format=jpg&name=large"
+                            },
+                            {
+                                "title": "Source Reader",
+                                "url": "/source-reader",
+                                "image": "https://pbs.twimg.com/media/ExZ3qLjVgAIKzoM?format=jpg&name=large"
+                            },
+                            {
+                                "title": "Twitter",
+                                "url": "https://twitter.com/PianoCat1010",
+                                "image": "https://corriente.top/wp-content/uploads/2015/11/twitter-logo.jpg"
+                            },
+                            {
+                                "title": "ほしいもの",
+                                "url": "https://0e0.pw/8_Hc",
+                                "image": "https://sekapri.com/wpd/wp-content/uploads/2020/05/amazon.jpg"
+                            },
+                            {
+                                "title": "GitHub",
+                                "url": "https://github.com/nsk-1010",
+                                "image": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                            },
+                            {
+                                "title": "YouTube",
+                                "url": "https://www.youtube.com/channel/UCScJbEsV4CTYo7llrukgRdQ",
+                                "image": "https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc"
                             }
-                        ];
-                        var json1 = JSON.stringify(json);
-                        var pages = JSON.parse(json1);
+                        ]`;
+                        let pages = JSON.parse(json);
                         for (var i=0;i<pages.length;i++) {
-                            document.write('<section><a href="' + pages[i].url + '" style="color: inherit;text-decoration: none;" target="_blank" rel="noopener noreferrer"><div style="background-image: url(' + pages[i].image + ')" class="my-card__media mdc-card__media mdc-card__media--16-9"><div class="mdc-card__media-content">' + pages[i].title + '</div></div></a></section>');
+                            var html = '<a style="text-decoration: none;" href="' +
+                                pages[i].url +
+                                '"><section><div class="mdc-card"><div class="mdc-card__media mdc-card__media--16-9" style="background-image:url(' +
+                                pages[i].image +
+                                ');background-size:cover;"></div><div class="mdc-card-wrapper__text-section" style="padding:0.5em;"><div class="mdc-typography--body1" style="color:#212121;">' +
+                                pages[i].title +
+                                '</div></div></section></a>';
+                            document.write(html);
                         }
                     </script>
                 </div>
             </div>
         </main>
+        <footer style="padding:1em;background:#fafafa;margin-top:2em;">
+            <p class="mdc-typography--body1">&copy;2021&nbsp;Piano&nbsp;Nekomiya.</p>
+        </footer>
     </body>
 </html>

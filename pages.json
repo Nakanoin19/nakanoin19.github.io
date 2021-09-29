@@ -8,5 +8,35 @@
         "title": "Chukoren Matsue",
         "url": "https://matsuechuko.shop",
         "image": "https://pbs.twimg.com/media/ErRBsSdVgAAfmb6?format=jpg&name=large"
+    },
+    {
+        "title": "Text Editor",
+        "url": "/web-editor",
+        "image": "https://pbs.twimg.com/media/ExZ3qLjVgAIKzoM?format=jpg&name=large"
+    },
+    {
+        "title": "Source Reader",
+        "url": "/source-reader",
+        "image": "https://pbs.twimg.com/media/ExZ3qLjVgAIKzoM?format=jpg&name=large"
+    },
+    {
+        "title": "Twitter",
+        "url": "https://twitter.com/PianoCat1010",
+        "image": "https://corriente.top/wp-content/uploads/2015/11/twitter-logo.jpg"
+    },
+    {
+        "title": "ほしいもの",
+        "url": "https://0e0.pw/8_Hc",
+        "image": "https://sekapri.com/wpd/wp-content/uploads/2020/05/amazon.jpg"
+    },
+    {
+        "title": "GitHub",
+        "url": "https://github.com/nsk-1010",
+        "image": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+    },
+    {
+        "title": "YouTube",
+        "url": "https://www.youtube.com/channel/UCScJbEsV4CTYo7llrukgRdQ",
+        "image": "https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc"
     }
 ]

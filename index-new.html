@@ -20,19 +20,25 @@
             :root {
                 --mdc-theme-primary: #03a9f4;
             }
+
             .grid {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
                 gap: 1em;
             }
-            @media screen and (max-width: 720px) {
+
+            @media screen and (min-width: 1025px) {
                 .grid {
                     grid-template-columns: repeat(4, 1fr);
                 }
             }
+            @media screen and (max-width: 1024px) and (min-width: 481px) {
+                .grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
             @media screen and (max-width: 480px) {
                 .grid {
-                    grid-template-columns: 1fr;
+                    grid-template-columns: repeat(2, 1fr);
                 }
             }
             #itembox .grid {
@@ -49,7 +55,7 @@
             </div>
         </header>
         <main class="mdc-top-app-bar--fixed-adjust" style="width:90%;margin:auto;">
-            <div id="about">
+            <div id="about" style="margin-top:1em;">
                 <h3 class="mdc-typography--headline3">About</h3>
                 <div class="mdc-card" style="padding:1em;">
                     <p class="mdc-typography--body1">島根県立中央病院(出雲市)生まれ、松江市北西部在住</p>
@@ -58,60 +64,24 @@
             </div>
             <div id="itembox" style="margin-top:1em;">
                 <h3 class="mdc-typography--headline3">Pages</h3>
-                <div class="grid">
+                <div class="grid" id="result">
                     <script type="text/javascript">
-                        var json = `[
-                            {
-                                "title": "Home Page",
-                                "url": "https://pianocat1010.shop",
-                                "image": "./assets/pineko.png"
-                            },
-                            {
-                                "title": "Chukoren Matsue",
-                                "url": "https://matsuechuko.shop",
-                                "image": "https://pbs.twimg.com/media/ErRBsSdVgAAfmb6?format=jpg&name=large"
-                            },
-                            {
-                                "title": "Text Editor",
-                                "url": "/web-editor",
-                                "image": "https://pbs.twimg.com/media/ExZ3qLjVgAIKzoM?format=jpg&name=large"
-                            },
-                            {
-                                "title": "Source Reader",
-                                "url": "/source-reader",
-                                "image": "https://pbs.twimg.com/media/ExZ3qLjVgAIKzoM?format=jpg&name=large"
-                            },
-                            {
-                                "title": "Twitter",
-                                "url": "https://twitter.com/PianoCat1010",
-                                "image": "https://corriente.top/wp-content/uploads/2015/11/twitter-logo.jpg"
-                            },
-                            {
-                                "title": "ほしいもの",
-                                "url": "https://0e0.pw/8_Hc",
-                                "image": "https://sekapri.com/wpd/wp-content/uploads/2020/05/amazon.jpg"
-                            },
-                            {
-                                "title": "GitHub",
-                                "url": "https://github.com/nsk-1010",
-                                "image": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                            },
-                            {
-                                "title": "YouTube",
-                                "url": "https://www.youtube.com/channel/UCScJbEsV4CTYo7llrukgRdQ",
-                                "image": "https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc"
+                        fetch('./pages.json')
+                            .then(response => response.text())
+                            .then(data => writekun(data));
+                        function writekun(json) {
+                            let pages = JSON.parse(json);
+                            for (var i=0;i<pages.length;i++) {
+                                var html = '<a style="text-decoration: none;" href="' +
+                                    pages[i].url +
+                                    '"><section><div class="mdc-card"><div class="mdc-card__media mdc-card__media--16-9" style="background-image:url(' +
+                                    pages[i].image +
+                                    ');background-size:cover;"></div><div class="mdc-card-wrapper__text-section" style="padding:0.5em;"><div class="mdc-typography--body1" style="color:#212121;">' +
+                                    pages[i].title +
+                                    '</div></div></section></a>';
+                                var element = document.getElementById("result");
+                                element.insertAdjacentHTML("beforeend", html);
                             }
-                        ]`;
-                        let pages = JSON.parse(json);
-                        for (var i=0;i<pages.length;i++) {
-                            var html = '<a style="text-decoration: none;" href="' +
-                                pages[i].url +
-                                '"><section><div class="mdc-card"><div class="mdc-card__media mdc-card__media--16-9" style="background-image:url(' +
-                                pages[i].image +
-                                ');background-size:cover;"></div><div class="mdc-card-wrapper__text-section" style="padding:0.5em;"><div class="mdc-typography--body1" style="color:#212121;">' +
-                                pages[i].title +
-                                '</div></div></section></a>';
-                            document.write(html);
                         }
                     </script>
                 </div>

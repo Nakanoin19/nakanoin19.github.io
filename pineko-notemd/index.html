@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ぴねこ式ノート用Markdownエディタ</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+JP:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@latest/normalize.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reseter.css/css/reseter.css" />
+        <link rel="stylesheet" href="./nav.css" />
+        <style>
+            html, body {
+                height: 100vh;
+            }
+
+            #editor {
+                height: calc(100% - 3.5em);
+            }
+
+            html, body, #editor {
+                margin: 0;
+                font-family: "Jost", "Noto Sans JP", sans-serif;
+                color: #333;
+                line-height: 1.7;
+            }
+
+            textarea, #editor > div {
+                vertical-align: top;
+                box-sizing: border-box;
+                padding: 1em;
+                overflow: auto;
+            }
+
+            @media screen and (min-width: 481px) {
+                textarea, #editor > div {
+                    display: inline-block;
+                    width: 49%;
+                    height: 100%;
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+                textarea, #editor > div {
+                    display: block;
+                    width: 100%;
+                    height: 49%;
+                }
+            }
+
+            textarea {
+                border: none;
+                resize: none;
+                outline: none;
+                background-color: #f6f6f6;
+                font-size: 1em;
+                font-family: "Roboto Mono", "Noto Sans JP", monospace;
+            }
+
+            @media screen and (min-width: 481px) {
+                textarea {
+                    border-right: 1px solid #ccc;
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+                textarea {
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+
+            pre, code, kbd, samp {
+                font-family: "Roboto Mono", "Noto Sans JP", monospace; 
+            }
+
+            pre {
+                padding: 1em;
+                background-color: #f6f6f6;
+                overflow-x: auto;
+                overflow-y: visible;
+            }
+
+            code {
+                background-color: #f6f6f6;
+                padding: 0.25em;
+            }
+
+            pre code {
+                padding: 0;
+            }
+
+            .important {
+                border: 1px solid #ff6666;
+                padding: 1em;
+                background-color: #ffeaed;
+            }
+
+            .important::before {
+                content: "!important";
+                color: #ce0000;
+            }
+
+            strong {
+                color: #ff2019;
+            }
+        </style>
+        <script src="https://unpkg.com/marked@latest"></script>
+        <script>
+            function showhtml(){
+                var input = document.getElementById("input");
+                var show = document.getElementById("show");
+                var html = marked(input.value);
+                var replace1 = html.replaceAll("<p>:::important</p>", "<div class='important'>");
+                var replace2 = replace1.replaceAll("<p>:::</p>", "</div>");
+                show.innerHTML = replace2;
+            };
+        </script>
+    </head>
+    <body>
+        <div id="nav-drawer">
+            <input id="nav-input" type="checkbox" class="nav-unshown">
+            <label id="nav-open" for="nav-input"><span></span></label>
+            <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+            <span style="font-size:1.5em;">For Pineko</span>
+            <div id="nav-content">
+                <h2>独自機能</h2>
+                <p>ノートに使うことが前提のため、重要な部分を当たりすくより強調できるimportantというテキスト装飾を用意しました。</p>
+                <h3>例</h3>
+                <pre><code>:::important<br><br>Hello!<br><br>:::</code>
+                </pre>
+                <p>↓↓↓</p>
+                <div class="important">
+                    <p>Hello!</p>
+                </div>
+            </div>
+        </div>
+        <div id="editor">
+            <textarea id="input" oninput="showhtml()"></textarea>
+            <div id="show"></div>
+        </div>
+    </body>
+</html>

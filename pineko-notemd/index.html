@@ -115,7 +115,7 @@
             function showhtml(){
                 var input = document.getElementById("input");
                 var show = document.getElementById("show");
-                var html = marked(input.value);
+                var html = marked.parse(input.value);
                 var replace1 = html.replaceAll("<p>:::important</p>", "<div class='important'>");
                 var replace2 = replace1.replaceAll("<p>:::</p>", "</div>");
                 show.innerHTML = replace2;

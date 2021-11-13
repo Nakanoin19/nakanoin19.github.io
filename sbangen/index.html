@@ -8,19 +8,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@latest/normalize.css">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
+        <script>
+            function senddiv() {
+                document.getElementById('bigkanji').innerHTML = document.getElementById('input').value.replace(/([々〇〻\u3400-\u9FFF\uF900-\uFAFF]|[\uD840-\uD87F][\uDC00-\uDFFF])/mugi, "<span style='font-size: 1.25em;'>$1</span>").replace(/(\n)/mugi, "<br><br>");
+            }
+        </script>
     </head>
     <body>
         <header>
             <h1>SBAN Generator</h1>
         </header>
         <main>
-            <textarea></textarea>
-            <div id="bigkanji">
-                漢字は大きく
-            </div>
+            <textarea id="input" oninput="senddiv()"></textarea>
+            <div id="bigkanji"></div>
         </main>
         <script>
-            document.getElementById('bigkanji').innerHTML = document.getElementById('bigkanji').innerHTML.replace(/^([\u{3005}\u{3007}\u{303b}\u{3400}-\u{9FFF}\u{F900}-\u{FAFF}\u{20000}-\u{2FFFF}][\u{E0100}-\u{E01EF}\u{FE00}-\u{FE02}]?)+$/mgu,"<span style='font-size: 2em;'>$1</span>");
+            document.getElementById('bigkanji').innerHTML = document.getElementById('bigkanji').innerHTML.replace(/([々〇〻\u3400-\u9FFF\uF900-\uFAFF]|[\uD840-\uD87F][\uDC00-\uDFFF])/mugi, "<span style='font-size: 1.25em;'>$1</span>");
         </script>
     </body>
 </html>

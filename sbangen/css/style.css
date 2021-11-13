@@ -2,6 +2,10 @@ html, body {
     height: calc(100vh - 0.25em);
 }
 
+*::-webkit-scrollbar {
+    display: none;
+}
+
 header {
     padding: 1em;
     border-bottom: 1px solid #ffffff;
@@ -15,6 +19,7 @@ header h1 {
 
 main {
     height: calc(100% - 4em - 1px);
+    width: 100%;
 }
 
 html, body {
@@ -64,4 +69,5 @@ div {
     font-size: 1.6em;
     font-weight: 900;
     text-align: center;
+    scrollbar-width: 0px;
 }

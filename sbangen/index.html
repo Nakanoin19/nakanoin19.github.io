@@ -12,9 +12,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
         <script>
             function senddiv() {
                 document.getElementById('bigkanji').innerHTML = document.getElementById('input').value.replace(/([々〇〻\u3400-\u9FFF\uF900-\uFAFF]|[\uD840-\uD87F][\uDC00-\uDFFF])/mugi, "<span style='font-size: 1.25em;'>$1</span>").replace(/(\n)/mugi, "<br><br>");
+            }
+            function save() {
+                var a = document.createElement('a');
+                a.href =  './result.html?html=' + encodeURIComponent(document.getElementById('bigkanji').innerHTML);
+                a.click();
             }
         </script>
     </head>
@@ -23,11 +29,22 @@
             <h1>SBAN Generator</h1>
         </header>
         <main>
-            <textarea id="input" oninput="senddiv()"></textarea>
+            <textarea id="input" oninput="senddiv()">本日はニコニコ動画に
+御アクセス頂き、
+ありがとうございます。
+
+大変申し訳ありませんが、
+この動画はアップロード者が削除したため
+ご覧になることが出来ません。
+
+またの御アクセスをお待ちしております。</textarea>
             <div id="bigkanji"></div>
+            <button style="appearance: none;-webkit-appearance: none;-moz-appearance: none;-ms-progress-appearance: initial;border: none;background-color: #000000;color: #ffffff;padding: 1em;position: absolute;bottom: 0.5em;right: 0.5em;border-radius: 100%;box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.15);" onclick="save()">
+                <span class="material-icons-sharp">photo_camera</span>
+            </button>
         </main>
         <script>
-            document.getElementById('bigkanji').innerHTML = document.getElementById('bigkanji').innerHTML.replace(/([々〇〻\u3400-\u9FFF\uF900-\uFAFF]|[\uD840-\uD87F][\uDC00-\uDFFF])/mugi, "<span style='font-size: 1.25em;'>$1</span>");
+            document.getElementById('bigkanji').innerHTML = document.getElementById('input').value.replace(/([々〇〻\u3400-\u9FFF\uF900-\uFAFF]|[\uD840-\uD87F][\uDC00-\uDFFF])/mugi, "<span style='font-size: 1.25em;'>$1</span>").replace(/(\n)/mugi, "<br><br>");
         </script>
     </body>
 </html>

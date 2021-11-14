@@ -45,7 +45,7 @@
             html2canvas(document.querySelector("html")).then(canvas => {
                 var imgelement = document.createElement("img");
                 imgelement.src = canvas.toDataURL("image/png");
-                console.log(imgelement);
+                console.log(canvas.toDataURL("image/png"));
                 document.body.innerHTML = imgelement;
             });
         </script>

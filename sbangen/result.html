@@ -4,30 +4,9 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@latest/normalize.css">
-        <style>
-            html, body {
-                background-color: #000000;
-                font-family: "Noto Sans JP", sans-serif;
-                font-weight: 900;
-                text-align: center;
-                font-size: 1.6em;
-                height: 100%;
-                width: 1920px;
-                color: #ffffff;
-            }
-            #result {
-                margin: 0;
-                width: 100%;
-            }
-        </style>
     </head>
     <body>
-        <div id="result" style="margin: 0;"></div>
-        <script>
+        <script type="text/javascript">
             const queries = window.location.href.split('?')[1];
             const params = {};
             queries.split('&').forEach(function (query) {
@@ -36,9 +15,12 @@
                 params[name] = data;
             });
 
-            var html = decodeURIComponent(params.html);
+            var pngbase64 = decodeURIComponent(params.pngbase64);
 
-            document.getElementById("result").innerHTML = html;
+            var imgelement = document.createElement("img");
+            imgelement.src = '"' + pngbase64 + '"';
+
+            document.getElementsByTagName("body").appendChild(imgelement);
         </script>
     </body>
 </html>

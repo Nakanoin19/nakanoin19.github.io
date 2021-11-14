@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" href="./css/pnk-imitatesans.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@latest/normalize.css">
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                background-color: #000000;
+            }
+            #result {
+                font-family: "PNK Imitate Sans", "Noto Sans JP", sans-serif;
+                font-weight: 900;
+                text-align: center;
+                font-size: 3.2em;
+                height: 100%;
+                width: 1920px;
+                color: #ffffff;
+                margin: 0;
+                padding-top: 1em;
+            }
+            img {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+        <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    </head>
+    <body>
+        <div id="result"></div>
+        <script type="text/javascript">
+            const queries = window.location.href.split('?')[1];
+            const params = {};
+            queries.split('&').forEach(function (query) {
+                const name = query.split('=')[0];
+                const data = query.split('=')[1];
+                params[name] = data;
+            });
+
+            var html = decodeURIComponent(params.html);
+
+            document.querySelector("#result").innerHTML = html;
+
+            html2canvas(document.querySelector("html")).then(canvas => {
+                document.querySelector("body").innerHTML = '<img src="' + canvas.toDataURL("image/webp") + '">';
+            });
+        </script>
+    </body>
+</html>

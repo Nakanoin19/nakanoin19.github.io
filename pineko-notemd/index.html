@@ -106,6 +106,17 @@
                 color: #ce0000;
             }
 
+            .goals {
+                border: 1px solid #3F51B5;
+                padding: 1em;
+                background-color: #E8EAF6;
+            }
+
+            .goals::before {
+                content: "Goals";
+                color: #1A237E;
+            }
+
             strong {
                 color: #ff2019;
             }
@@ -117,8 +128,9 @@
                 var show = document.getElementById("show");
                 var html = marked.parse(input.value);
                 var replace1 = html.replaceAll("<p>:::important</p>", "<div class='important'>");
-                var replace2 = replace1.replaceAll("<p>:::</p>", "</div>");
-                show.innerHTML = replace2;
+                var replace2 = replace1.replaceAll("<p>:::goals</p>", "<div class='goals'>");
+                var replace3 = replace2.replaceAll("<p>:::</p>", "</div>");
+                show.innerHTML = replace3;
             };
         </script>
     </head>

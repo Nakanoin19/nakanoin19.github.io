@@ -31,7 +31,7 @@
                 height: 3.5rem;
                 z-index: 9999;
             }
-            button {
+            #ripple {
                 appearance: none;
                 -webkit-appearance: none;
                 -moz-appearance: none;
@@ -67,29 +67,29 @@
                     Ripple Color
                     <input type="color" oninput="changecolor();" value="#00BCD4" id="colorselect" list="color-list">
                     <datalist id="color-list">
-                        <option value="#F44336"></option>
-                        <option value="#E91E63"></option>
-                        <option value="#9C27B0"></option>
-                        <option value="#673AB7"></option>
-                        <option value="#3F51B5"></option>
-                        <option value="#2196F3"></option>
-                        <option value="#03A9F4"></option>
-                        <option value="#00BCD4"></option>
-                        <option value="#009688"></option>
-                        <option value="#8BC34A"></option>
-                        <option value="#CDDC39"></option>
-                        <option value="#FFEB3B"></option>
-                        <option value="#FFC107"></option>
-                        <option value="#FF9800"></option>
-                        <option value="#FF5722"></option>
-                        <option value="#795548"></option>
-                        <option value="#9E9E9E"></option>
-                        <option value="#607D8B"></option>
-                        <option value="#000000"></option>
-                        <option value="#ffffff"></option>
+                        <option>#F44336</option>
+                        <option>#E91E63</option>
+                        <option>#9C27B0</option>
+                        <option>#673AB7</option>
+                        <option>#3F51B5</option>
+                        <option>#2196F3</option>
+                        <option>#03A9F4</option>
+                        <option>#00BCD4</option>
+                        <option>#009688</option>
+                        <option>#8BC34A</option>
+                        <option>#CDDC39</option>
+                        <option>#FFEB3B</option>
+                        <option>#FFC107</option>
+                        <option>#FF9800</option>
+                        <option>#FF5722</option>
+                        <option>#795548</option>
+                        <option>#9E9E9E</option>
+                        <option>#607D8B</option>
+                        <option>#000000</option>
+                        <option>#FFFFFF</option>
                     </datalist>
                 </label></p>
         </header>
-        <button class="ripple"></button>
+        <div id="ripple" class="ripple"></div>
     </body>
 </html>

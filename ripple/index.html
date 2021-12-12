@@ -52,9 +52,9 @@
                 var ripplecolor = document.querySelector("#colorselect").value;
                 document.querySelector(".ripple").style.setProperty("--ripple-color", ripplecolor);
                 if (ripplecolor == "#FFFFFF" || ripplecolor == "#ffffff") {
-                    document.querySelector("button").style.setProperty("background-color", "#000000");
+                    document.querySelector("#ripple").style.setProperty("background-color", "#000000");
                 } else {
-                    document.querySelector("button").style.setProperty("background-color", "#FFFFFF");
+                    document.querySelector("#ripple").style.setProperty("background-color", "#FFFFFF");
                 }
             }
         </script>
@@ -65,7 +65,7 @@
             <p style="position: absolute;top: calc(2.5em / 2);right: 1rem;">
                 <label>
                     Ripple Color
-                    <input type="color" oninput="changecolor();" value="#00BCD4" id="colorselect" list="color-list">
+                    <input type="color" pattern="#[0-9A-Fa-f]{6}" oninput="changecolor();" value="#00BCD4" id="colorselect" list="color-list">
                     <datalist id="color-list">
                         <option>#F44336</option>
                         <option>#E91E63</option>

@@ -1,0 +1,25 @@
+:root {
+    --ripple-color: #00BCD4;
+}
+
+.ripple { 
+    position: relative; 
+    overflow: hidden; 
+} 
+
+.ripple .ripple-active { 
+    position: absolute; 
+    pointer-events: none; 
+    background: var(--ripple-color); 
+    border-radius: 100%; 
+    transform: scale(0); 
+    animation: ripple .8s; 
+    opacity: .3; 
+}
+
+@keyframes ripple { 
+    to { 
+        opacity: 0; 
+        transform: scale(2.0); 
+    } 
+}

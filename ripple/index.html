@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ripple!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="ripple.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@latest/normalize.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reseter.css/css/reseter.css" />
+        <script src="ripple.js"></script>
+        <style>
+            html, body {
+                height: 100%;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                color: #212121;
+                line-height: 1.4;
+                font-family: "Jost", sans-serif;
+            }
+            header {
+                padding: 1rem;
+                border-bottom: 1px solid #ddd;
+                position: fixed;
+                background-color: #fff;
+                width: 100%;
+                height: 3.5rem;
+                z-index: 9999;
+            }
+            button {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -ms-progress-appearance: initial;
+                border: none;
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                background-color: #ffffff;
+                margin: 0;
+                text-align: center;
+                vertical-align: middle;
+                align-items: stretch;
+            }
+        </style>
+        <script>
+            function changecolor() {
+                var ripplecolor = document.querySelector("#colorselect").value;
+                document.querySelector(".ripple").style.setProperty("--ripple-color", ripplecolor);
+                if (ripplecolor == "#FFFFFF" || ripplecolor == "#ffffff") {
+                    document.querySelector("button").style.setProperty("background-color", "#000000");
+                } else {
+                    document.querySelector("button").style.setProperty("background-color", "#FFFFFF");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <p style="font-size: 1.5rem;">Ripple!</p>
+            <p style="position: absolute;top: calc(2.5em / 2);right: 1rem;">
+                <label>
+                    Ripple Color
+                    <input type="color" oninput="changecolor();" value="#00BCD4" id="colorselect" list="color-list">
+                    <datalist id="color-list">
+                        <option value="#F44336"></option>
+                        <option value="#E91E63"></option>
+                        <option value="#9C27B0"></option>
+                        <option value="#673AB7"></option>
+                        <option value="#3F51B5"></option>
+                        <option value="#2196F3"></option>
+                        <option value="#03A9F4"></option>
+                        <option value="#00BCD4"></option>
+                        <option value="#009688"></option>
+                        <option value="#8BC34A"></option>
+                        <option value="#CDDC39"></option>
+                        <option value="#FFEB3B"></option>
+                        <option value="#FFC107"></option>
+                        <option value="#FF9800"></option>
+                        <option value="#FF5722"></option>
+                        <option value="#795548"></option>
+                        <option value="#9E9E9E"></option>
+                        <option value="#607D8B"></option>
+                        <option value="#000000"></option>
+                        <option value="#ffffff"></option>
+                    </datalist>
+                </label></p>
+        </header>
+        <button class="ripple"></button>
+    </body>
+</html>

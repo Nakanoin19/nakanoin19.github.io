@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+JP:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@latest/normalize.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reseter.css/css/reseter.css" />
         <link rel="stylesheet" href="./nav.css" />
@@ -136,6 +137,23 @@
                 var replace3 = replace2.replaceAll("<p>:::</p>", "</div>");
                 show.innerHTML = replace3;
             };
+
+            function save() {
+                const text = document.getElementById('input').value;
+                if (!text) { return; }
+                const blob = new Blob([text], { type: 'text/markdown;charset=utf-8' });
+                const a = document.createElement('a');
+                a.href =  URL.createObjectURL(blob);
+                var time = new Date();
+                var year = time.getFullYear();
+                var month = ("0" + time.getMonth() + 1).slice(-2);
+                var date = ("0" + time.getDate()).slice(-2);
+                var hour = ("0" + time.getHours()).slice(-2);
+                var minute = ("0" + time.getMinutes()).slice(-2);
+                var second = ("0" + time.getSeconds()).slice(-2);
+                a.download = year + "-" + month + "-" + date + "-" + hour + "-" + minute + "-" + second + '.md';
+                a.click();
+            };
         </script>
     </head>
     <body>
@@ -168,5 +186,8 @@
             <textarea id="input" oninput="showhtml()"></textarea>
             <div id="show"></div>
         </div>
+        <button style="appearance: none;-webkit-appearance: none;-moz-appearance: none;-ms-progress-appearance: initial;border: none;background-color: #009688;color: #ffffff;padding: 1em;position: absolute;bottom: 0.5em;right: 0.5em;border-radius: 100%;box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);line-height: 0;" onclick="save()">
+            <span class="material-icons-sharp" style="font-size: 1.5rem;">download</span>
+        </button>
     </body>
 </html>

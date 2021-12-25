@@ -151,7 +151,7 @@
         <script src="https://unpkg.com/marked@latest/marked.min.js"></script>
         <script>
             function showhtml(){
-                var input = document.getElementById("input");
+                var input = document.getElementById("text");
                 var show = document.getElementById("show");
                 var html = marked.parse(input.value);
                 var replace1 = html.replaceAll("<p>:::important</p>", "<div class='important'>");
@@ -161,7 +161,7 @@
             };
 
             function save() {
-                const text = document.getElementById('input').value;
+                const text = document.getElementById('text').value;
                 if (!text) { return; }
                 const blob = new Blob([text], { type: 'text/markdown;charset=utf-8' });
                 const a = document.createElement('a');
@@ -235,7 +235,7 @@
             </div>
         </div>
         <div id="editor">
-            <textarea id="input" oninput="showhtml()"></textarea>
+            <textarea id="text" oninput="showhtml()"></textarea>
             <div id="show"></div>
         </div>
     </body>

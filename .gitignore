@@ -1,0 +1,4 @@
+# css内で生成されたcss.map,css/modules内で生成されたcss,scc.mapは無視
+css/*css.map
+css/modules/*.css
+css/modules/*.css.map

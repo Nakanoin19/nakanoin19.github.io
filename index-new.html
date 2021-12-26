@@ -3,92 +3,60 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Piano&nbsp;Nekomiya</title>
-        <meta name="description" content="">
+        <title>Piano Nekomiya</title>
+        <link rel="icon" type="image/svg+xml" href="./assets/logo-8f8f8f.svg">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="./assets/icon.png">
+        <meta name="description" content="ぴねこのGitHub Pagesページ">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="./assets/pineko.png">
-        <link rel="apple-touch-icon" sizes="1024x1024" href="./assets/pineko.png">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-        <link href="https://nsk-1010.github.io/mdc-web-japanese-font/mdc-web-jp-font.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/krishdevdb/reseter.css/css/reseter.min.css">
-        <link rel="stylesheet" href="./css/normalize.css">
-        <style>
-            :root {
-                --mdc-theme-primary: #03a9f4;
-            }
-
-            .grid {
-                display: grid;
-                gap: 1em;
-            }
-
-            @media screen and (min-width: 1025px) {
-                .grid {
-                    grid-template-columns: repeat(4, 1fr);
-                }
-            }
-            @media screen and (max-width: 1024px) and (min-width: 481px) {
-                .grid {
-                    grid-template-columns: repeat(3, 1fr);
-                }
-            }
-            @media screen and (max-width: 480px) {
-                .grid {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
-            #itembox .grid {
-                margin-top: 1em;
-            }
-        </style>
+        <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Roboto+Mono:400,700|Google+Sans+Text:400,500,700,900|Google+Sans:400,500,700,900|Google+Sans+Mono:400,500,700|Noto+Sans+JP:100,300,400,500,700" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Material+Icons+Sharp" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
-    <body class="mdc-typography">
-        <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
-            <div class="mdc-top-app-bar__row">
-                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                    <span class="mdc-top-app-bar__title">Piano&nbsp;Nekomiya</span>
-                </section>
-            </div>
-        </header>
-        <main class="mdc-top-app-bar--fixed-adjust" style="width:90%;margin:auto;">
-            <div id="about" style="margin-top:1em;">
-                <h3 class="mdc-typography--headline3">About</h3>
-                <div class="mdc-card" style="padding:1em;">
-                    <p class="mdc-typography--body1">島根県立中央病院(出雲市)生まれ、松江市北西部在住</p>
-                    <p class="mdc-typography--body1">Naiw, Ablaze, NNN Animeに所属</p>
-                </div>
-            </div>
-            <div id="itembox" style="margin-top:1em;">
-                <h3 class="mdc-typography--headline3">Pages</h3>
-                <div class="grid" id="result">
-                    <script type="text/javascript">
-                        fetch('./pages.json')
-                            .then(response => response.text())
-                            .then(data => writekun(data));
-                        function writekun(json) {
-                            let pages = JSON.parse(json);
-                            for (var i=0;i<pages.length;i++) {
-                                var html = '<a style="text-decoration: none;" href="' +
-                                    pages[i].url +
-                                    '"><section><div class="mdc-card"><div class="mdc-card__media mdc-card__media--16-9" style="background-image:url(' +
-                                    pages[i].image +
-                                    ');background-size:cover;"></div><div class="mdc-card-wrapper__text-section" style="padding:0.5em;"><div class="mdc-typography--body1" style="color:#212121;">' +
-                                    pages[i].title +
-                                    '</div></div></section></a>';
-                                var element = document.getElementById("result");
-                                element.insertAdjacentHTML("beforeend", html);
-                            }
+    <body>
+        <header>
+            <h1><img src="assets/logo-1f1f1f.svg" style="margin-top: -0.4rem;">Piano Nekomiya</h1>
+            <script>
+                window.addEventListener('DOMContentLoaded', function(){
+                    window.addEventListener('scroll', function(){
+                        if ( window.scrollY == 0 ) {
+                            document.querySelector('header').setAttribute('id', 'scroll0');
+                        } else {
+                            document.querySelector('header').setAttribute('id', 'scrollon');
                         }
-                    </script>
-                </div>
+                    });
+                });
+            </script>
+        </header>
+        <main>
+            <h3>About</h3>
+            <p>2006/8/10 島根県立中央病院(出雲市)生まれ、松江市北西部在住</p>
+            <p>Ablaze所属</p>
+            <h3>Links</h3>
+            <div id="result" class="grid">
+                <script type="text/javascript">
+                    fetch('./pages.json')
+                        .then(response => response.text())
+                        .then(data => writekun(data));
+                    function writekun(json) {
+                        let pages = JSON.parse(json);
+                        for (var i=0;i<pages.length;i++) {
+                            var html = '<a style="text-decoration: none;" href="' +
+                                pages[i].url +
+                                '"><section><div class="card"><div class="img" style="background-image: url(' +
+                                pages[i].image +
+                                ')"></div><div class="card-text"><p style="color:#212121;">' +
+                                pages[i].title +
+                                '</p></div></section></a>';
+                            var element = document.getElementById("result");
+                            element.insertAdjacentHTML("beforeend", html);
+                        }
+                    }
+                </script>
             </div>
         </main>
-        <footer style="padding:1em;background:#fafafa;margin-top:2em;">
-            <p class="mdc-typography--body1">&copy;2021&nbsp;Piano&nbsp;Nekomiya.</p>
+        <footer>
+            <p style="text-align: right;"><span class="material-icons-sharp" style="vertical-align: -0.3rem;">copyright</span>2021&nbsp;Piano&nbsp;Nekomiya.</p>
         </footer>
     </body>
 </html>

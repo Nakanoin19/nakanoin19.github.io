@@ -24,7 +24,7 @@ main {
 
 html, body {
     margin: 0;
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "GenZenGothic", sans-serif;
     color: #ffffff;
     background-color: #000000;
 }
@@ -67,8 +67,12 @@ textarea {
 }
 
 div {
-    font-size: 1.6em;
+    font-size: 2em;
     font-weight: 900;
     text-align: center;
     scrollbar-width: 0px;
+}
+
+button {
+    font-family: "Noto Sans JP";
 }

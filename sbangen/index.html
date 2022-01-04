@@ -10,12 +10,12 @@
         <link rel="stylesheet" href="./css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
+        <link href="./css/genzengothic.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
         <script>
             function senddiv() {
-                document.getElementById('bigkanji').innerHTML = document.getElementById('input').value.replace(/([々〇〻\u3400-\u9FFF\uF900-\uFAFF]|[\uD840-\uD87F][\uDC00-\uDFFF])/mugi, "<span style='font-size: 1.25em;'>$1</span>").replace(/(\n)/mugi, "<br><br>");
+                document.getElementById('bigkanji').innerHTML = document.getElementById('input').value.replace(/(^[a-zA-Z0-9!-/:-@¥[-`{-~]*$|[！-～])/mugi, "<span style='font-size: 0.8em;'>$1</span>").replace(/(\n)/mugi, "<br><br>");
             }
             function save() {
                 var a = document.createElement('a');
@@ -56,7 +56,7 @@
             </button>
         </main>
         <script>
-            document.getElementById('bigkanji').innerHTML = document.getElementById('input').value.replace(/([々〇〻\u3400-\u9FFF\uF900-\uFAFF]|[\uD840-\uD87F][\uDC00-\uDFFF])/mugi, "<span style='font-size: 1.25em;'>$1</span>").replace(/(\n)/mugi, "<br><br>");
+            document.getElementById('bigkanji').innerHTML = document.getElementById('input').value.replace(/(^[a-zA-Z0-9!-/:-@¥[-`{-~]*$|[！-～])/mugi, "<span style='font-size: 0.8em;'>$1</span>").replace(/(\n)/mugi, "<br><br>");
         </script>
     </body>
 </html>

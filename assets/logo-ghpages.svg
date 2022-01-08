@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   width="120"
+   height="120"
+   viewBox="0 0 120 120"
+   version="1.1"
+   id="svg5"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <style>
+    .stroke {
+      stroke: #1f1f1f;
+    }
+    .fill {
+      fill: #1f1f1f
+    }
+    @media (prefers-color-scheme: dark) {
+      .stroke {
+        stroke: #ffffff;
+      }
+      .fill {
+        fill: #ffffff;
+      }
+    }  
+  </style>
+  <defs
+     id="defs2" />
+  <g
+     id="layer1">
+    <circle
+       id="path31"
+       cx="60"
+       cy="60"
+       class="stroke"
+       style="fill:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       r="57.222031" />
+    <path
+       style="fill:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 15,95.000288 12.5,-22.5 17.5,22.5 h 30 l 17.5,-22.5 12.5,22.5 -12.5,-22.5 -17.5,22.5 H 45 l -17.5,-22.5 z"
+       id="path1107"
+       class="stroke" />
+    <g
+       id="g20334"
+       class="fill"
+       transform="matrix(2.7083333,0,0,2.7083333,25,2.766)">
+      <path
+         id="rect20322"
+         style="fill:none"
+         d="M 0,0 H 24 V 24 H 0 Z" />
+    </g>
+  </g>
+  <path
+     style="fill:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 5,52.5 H 115 Z"
+     id="path45484"
+     class="stroke" />
+  <path
+     style="fill:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 15,24 V 52.5 Z"
+     id="path46247"
+     class="stroke" />
+  <path
+     style="fill:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 30,10 V 52.5 Z"
+     id="path46247-9"
+     class="stroke" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#path46247"
+     id="use47393"
+     transform="translate(90)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#path46247-9"
+     id="use47646"
+     transform="translate(60)"
+     width="100%"
+     height="100%" />
+  <path
+     style="fill:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 45,5 V 52.5 Z"
+     id="path47648"
+     class="stroke" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#path47648"
+     id="use47749"
+     transform="translate(30)"
+     width="100%"
+     height="100%" />
+  <path
+     style="fill:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 60,5 V 52.5 Z"
+     id="path47751"
+     class="stroke" />
+  <path
+     style="stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+     d="M 35,10 25,15 V 35 H 35 Z"
+     id="path48329"
+     class="fill" />
+  <path
+     style="stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+     d="m 85,10 10,5 V 35 H 85 Z"
+     id="path49443"
+     class="fill" />
+  <path
+     style="stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+     d="M 70,3 80,7 V 35 H 70 Z"
+     id="path49445"
+     class="fill" />
+  <path
+     style="stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+     d="m 20,22 -10,8 v 5 h 10 z"
+     id="path49770"
+     class="fill" />
+  <path
+     id="rect50399"
+     style="stroke-width:8.39849;fill-opacity:1"
+     d="M 55,2.5 H 65 V 35 H 55 Z"
+     class="fill" />
+</svg>

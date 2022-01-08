@@ -1,3 +1,32 @@
 $sans-serif-headline: "Google Sans", "Roboto", "Noto Sans JP", sans-serif
 $sans-serif-text: "Google Sans Text", "Roboto", "Noto Sans JP", sans-serif
 $monospace: "Google Sans Mono", "Roboto Mono", "Noto Sans JP", monospace
+
+:root
+    @media (prefers-color-scheme: light)
+        --text-color: #1f1f1f
+        --background: #ffffff
+        --preformatted-background: #f5f5f5
+        --kbd-border: #dadce0
+        --second-color: #f0faff
+        --card-active: #e3e3e3
+        --focus-border: #000000
+        --third-color: #e1f5fe
+    @media (prefers-color-scheme: dark)
+        --text-color: #ffffff
+        --background: #1f1f1f
+        --preformatted-background: #242424
+        --kbd-border: #2c2c2c
+        --second-color: #292929
+        --card-active: #212121
+        --focus-border: #ffffff
+        --third-color: #81d4fa
+
+$text-color: var(--text-color)
+$background: var(--background)
+$preformatted-background: var(--preformatted-background)
+$kbd-border: var(--kbd-border)
+$second-color: var(--second-color)
+$card-active: var(--card-active)
+$focus-border: var(--focus-border)
+$third-color: var(--third-color)

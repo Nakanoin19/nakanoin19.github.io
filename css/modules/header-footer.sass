@@ -5,8 +5,7 @@ header
     width: 100%
     align-items: flex-start
 
-    img
-        height: 1.375rem
+    object
         margin-right: 1rem
 
     h1
@@ -14,16 +13,19 @@ header
         font-weight: 500
         padding: 0
         margin: 0
-        color: #1f1f1f
+        color: $text-color
         line-height: 1
 
+        object
+            margin-top: -0.4rem
+
     &#scroll0
-        background-color: #ffffff
+        background-color: $background
 
     &#scrollon
-        background-color: #f0faff
+        background-color: $second-color
 
 footer
     padding: 1rem
-    background-color: #f0faff
+    background-color: $second-color
     margin-top: 1rem

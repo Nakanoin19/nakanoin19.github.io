@@ -8,13 +8,14 @@
             padding: 1rem
             line-height: 1
             margin: 0
+            color: $text-color
 
     .img
         padding: 0
         background-size: cover
         background-position: center
         border-radius: 2rem
-        background-color: #e1f5fe
+        background-color: $third-color
         transition: border-radius cubic-bezier(0.4, 0, 0.2, 1) 250ms
 
         @media screen and (min-width: 1025px)
@@ -34,9 +35,9 @@
         transition: border-radius cubic-bezier(0.4, 0, 0.2, 1) 250ms
 
     &:focus, &:focus-visible
-        border: 2px solid #000000
+        border: 2px solid $focus-border
         border-radius: 1rem
 
     &:active
-        background-color: #e3e3e3
+        background-color: $card-active
         border-radius: 2rem

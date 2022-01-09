@@ -1,5 +1,5 @@
 document.querySelector('script[src="//cache1.value-domain.com/xrea_header.js"]').remove();
-document.querySelector("#vdbanner").remove();
+document.querySelector("#vdbanner:first-child").remove();
 (function () {
     var func = function () {
         var parent = document.querySelector("main#main")[0];

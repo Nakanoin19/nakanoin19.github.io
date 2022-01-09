@@ -10,7 +10,7 @@ document.querySelector("#vdbanner").remove();
         var randElm = elements[Math.floor(Math.random() * elements.length)];
         var newBox = document.createElement("div");
         newBox.setAttribute('id', 'vdbanner');
-        newBox.setAttribute("style", "display:block!important;position:relative!important;top:0!important;left:0!important;margin:10px 0 !important;padding:0!important;text-align:center!important;");
+        newBox.setAttribute("style", "display:block!important;padding:0!important;text-align:center!important;");
         newBox.innerHTML = randElm;
         parent.insertBefore(newBox, parent.firstChild);
     };

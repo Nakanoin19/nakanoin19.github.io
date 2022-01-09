@@ -6,7 +6,7 @@ document.querySelector("#vdbanner").remove();
         if (parent === null) {
             return false;
         }
-        var elements = ['<a href="https://www.value-domain.com/value-auth/?adref=xrea_ad&argument=w9Qy6aHQ&dmai=a5f3e009b2fa09" target="_blank" rel="nofollow" style="display:inline-block!important;position:relative!important;top:0!important;left:0!important;margin:0!important;padding:0!important;"><img src="https://www.value-domain.com/security/value-auth/img/valueauth_bnr.png" alt="ﾂ･0縺九ｉ菴ｿ縺医ｋ縲∵悽莠ｺ隱崎ｨｼ繧ｵ繝ｼ繝薙せ Value-Auth" style="display:inline-block!important;position:relative!important;top:0!important;left:0!important;margin:0!important;padding:0!important;width:100%!important;max-width:468px;max-height:60px;vertical-align:bottom;"></a>'];
+        var elements = ['<a href="https://www.value-domain.com/value-auth/?adref=xrea_ad&argument=w9Qy6aHQ&dmai=a5f3e009b2fa09" target="_blank" rel="nofollow" style="display:inline-block!important;position:relative!important;top:0!important;left:0!important;margin:0!important;padding:0!important;"><img src="https://www.value-domain.com/security/value-auth/img/valueauth_bnr.png" alt="¥0から使える、本人認証サービス Value-Auth" style="display:inline-block!important;position:relative!important;top:0!important;left:0!important;margin:0!important;padding:0!important;width:100%!important;max-width:468px;max-height:60px;vertical-align:bottom;"></a>'];
         var randElm = elements[Math.floor(Math.random() * elements.length)];
         var newBox = document.createElement("div");
         newBox.setAttribute('id', 'vdbanner');
